@@ -1,8 +1,5 @@
 //define functions here
 
-$(document).ready(function(){
-})
-
 function getIt(){
   $("p").on("click", function() {
     alert('Hey!')
@@ -16,7 +13,7 @@ function frameIt(){
 }
 
 function pressIt(){
-  $('input').on('keydown', function(key) {
+  $('input').on('keydown', function(e) {
     if(key.which == 71){
         alert('g was pressed');
     }
@@ -24,7 +21,10 @@ function pressIt(){
 }
 
 function submitIt(){
-  $("form").on("submit", function() {
+  $("form").on("submit", function(e) {
     alert('Your form is going to be submitted now.')
   }
 )}
+
+$(document).ready(function(){
+})
